@@ -28,7 +28,6 @@ Feature: to test project api
     And assert response.length == 1
     And match response[0].name == 'Aruba'
 
-
 #negative case : given name returned no found record
   Scenario: no found record returned
     Given path '/rest/v2/name/arubaq'
