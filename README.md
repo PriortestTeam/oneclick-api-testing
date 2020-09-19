@@ -1,2 +1,2 @@
-# OneClick_API_Testing
-Automate OneClick API Testing
+# Karata API Testing Project
+Automate API Testing
