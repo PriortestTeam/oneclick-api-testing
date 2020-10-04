@@ -5,6 +5,8 @@ import net.minidev.json.JSONObject;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
+
 
 public class MyCustomClass {
     // static method
@@ -27,8 +29,23 @@ public class MyCustomClass {
         return flage;
     }
 
+    // static method
+    public static String userNameGenerator() {
+        String firstName = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String secondName = "abcdefghijklmnopqrstuvwxyz";
+        return userNameGenerator(firstName,5) +"."+ userNameGenerator(secondName,5);
+    }
 
-
-
+    // static method
+    public static String userNameGenerator(String selectionChar,int len) {
+        StringBuilder salt = new StringBuilder();
+        Random rnd = new Random();
+        while (salt.length() < len) { // length of the random string.
+            int index = (int) (rnd.nextFloat() * selectionChar.length());
+            salt.append(selectionChar.charAt(index));
+        }
+        String saltStr = salt.toString();
+        return saltStr;
+    }
 
 }

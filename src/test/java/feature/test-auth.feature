@@ -1,8 +1,6 @@
 @Var
 Feature: to test API Authentication
 
-
-
   Background: declare variables
   * url 'https://reqres.in/api/register'
 
