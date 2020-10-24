@@ -1,3 +1,4 @@
+@Test
 Feature: to test post call
 
   Background:
@@ -5,7 +6,7 @@ Feature: to test post call
    * def javaMethod = Java.type('com.oneclick.karate.util.MyCustomClass')
    * def jsonloads = {read:'classpath:src/test/resource/comparedContent.json', filename: 'multiple_testJson.json', contentType: 'application/text'}
 
-
+@Test
   Scenario: upload file as reading a file name
     * url 'https://postman-echo.com'
     Given path '/post'

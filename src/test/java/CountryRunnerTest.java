@@ -1,6 +1,7 @@
 import com.intuit.karate.junit5.Karate;
+import io.qameta.allure.Description;
 
-public class CountryRunner {
+public class CountryRunnerTest {
 /*
     @Karate.Test
     Karate testTags() { return Karate.run("country-get").tags("@Value").relativeTo(getClass()); }
@@ -34,5 +35,6 @@ public class CountryRunner {
     Karate testPost() { return Karate.run("classpath:featurepost/country-post-dynamical.feature").tags("@dataDynamically").relativeTo(getClass());}*/
 
     @Karate.Test
+    @Description
     Karate testUpload() { return Karate.run("classpath:featurepost/country-post.feature").tags("@multiUpload").relativeTo(getClass());}
 }
